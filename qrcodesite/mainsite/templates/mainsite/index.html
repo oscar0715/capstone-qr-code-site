@@ -1,0 +1,22 @@
+{% extends 'mainsite/base.html' %}
+{% load static %}
+
+{% block title %}
+Pittsburgh Airport
+{% endblock %}
+
+{% block meta %}
+	<link rel="stylesheet" href="{% static 'mainsite/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div>
+	<iframe id="iFrame1" src="https://docs.google.com/forms/d/e/1FAIpQLSd5NCQVo5mkg3G5l_CVNzNpqKF9lGGorYuad02veb4kslbOcg/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
+</div>
+
+{% endblock %}
+
+
+{% block script %}     
+<script type="text/javascript" src="{% static 'mainsite/index.js' %}"></script>
+{% endblock %} 

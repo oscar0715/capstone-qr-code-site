@@ -1,0 +1,1222 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"not",
+				"notTwoVowels"
+			],
+			[
+				"font",
+				"font-variant"
+			],
+			[
+				"fon",
+				"font-variant"
+			],
+			[
+				"p",
+				"println"
+			],
+			[
+				"ne",
+				"nextLine"
+			],
+			[
+				"S",
+				"System"
+			],
+			[
+				"s",
+				"scanner"
+			],
+			[
+				"file",
+				"fileName"
+			],
+			[
+				"fi",
+				"firstline"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"map",
+				"mapS"
+			],
+			[
+				"ma",
+				"mapS"
+			],
+			[
+				"len",
+				"lengthS"
+			],
+			[
+				"va",
+				"val"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"val",
+				"valp"
+			],
+			[
+				"sho",
+				"show_pointer"
+			],
+			[
+				"show",
+				"show_byte"
+			],
+			[
+				"cu",
+				"current_donor"
+			],
+			[
+				"c",
+				"current_donor"
+			],
+			[
+				"cou",
+				"courses"
+			],
+			[
+				"student",
+				"Student_ID"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"se",
+				"secretCharArray"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"driver",
+				"driverId"
+			],
+			[
+				"pro",
+				"processDriverLocation"
+			],
+			[
+				"co",
+				"collector"
+			],
+			[
+				"Out",
+				"OutgoingMessageEnvelope"
+			],
+			[
+				"cha",
+				"cache"
+			],
+			[
+				"da",
+				"danglingLinks"
+			],
+			[
+				"ca",
+				"cache"
+			],
+			[
+				"al",
+				"allNodes"
+			],
+			[
+				"dan",
+				"danglingNodes"
+			],
+			[
+				"fol",
+				"followee"
+			],
+			[
+				"fo",
+				"follower"
+			],
+			[
+				"coutn",
+				"counts"
+			],
+			[
+				"edge",
+				"edge_counts"
+			],
+			[
+				"reple",
+				"replaceAll"
+			],
+			[
+				"get",
+				"getBytes"
+			],
+			[
+				"GET",
+				"getBytes"
+			],
+			[
+				"ra",
+				"rawWord"
+			],
+			[
+				"par",
+				"parseInt"
+			],
+			[
+				"c_",
+				"c_custkey"
+			],
+			[
+				"d_y",
+				"d_yearmonth"
+			],
+			[
+				"d",
+				"d_year"
+			],
+			[
+				"yea",
+				"d_yearmonth"
+			],
+			[
+				"lo_ord",
+				"lo_orderpriority"
+			],
+			[
+				"pa",
+				"PARTITIONED"
+			],
+			[
+				"d_",
+				"d_yearmonth"
+			],
+			[
+				"resul",
+				"result"
+			],
+			[
+				"prin",
+				"println"
+			],
+			[
+				"selectFromSQLq3_",
+				"selectFromSQLq3_n"
+			],
+			[
+				"id",
+				"id_endTime"
+			],
+			[
+				"st",
+				"start_date"
+			],
+			[
+				"user",
+				"userid"
+			],
+			[
+				"my",
+				"MyHandler"
+			],
+			[
+				"tweet",
+				"tweet_info"
+			],
+			[
+				"print",
+				"println"
+			],
+			[
+				"post",
+				"postArray"
+			],
+			[
+				"apo",
+				"apostArray"
+			],
+			[
+				"po",
+				"postArray"
+			],
+			[
+				"pos",
+				"PostInfo"
+			],
+			[
+				"js",
+				"JSONObject"
+			],
+			[
+				"User",
+				"userID"
+			],
+			[
+				"fow",
+				"follower"
+			],
+			[
+				"USer",
+				"UserID"
+			],
+			[
+				"followee",
+				"followeeId"
+			],
+			[
+				"P",
+				"PostInfo2"
+			],
+			[
+				"getU",
+				"getUserID"
+			],
+			[
+				"U",
+				"UserID"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"qu",
+				"queque"
+			],
+			[
+				"pri",
+				"private"
+			],
+			[
+				"use",
+				"userinfo"
+			],
+			[
+				"Pos",
+				"post"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"Post",
+				"postList"
+			],
+			[
+				"tab",
+				"tableName"
+			],
+			[
+				"foll",
+				"followeeId"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"B",
+				"PriorityBlockingQueue"
+			],
+			[
+				"cp",
+				"compareTo"
+			],
+			[
+				"imp",
+				"implement"
+			],
+			[
+				"name",
+				"nameArray"
+			],
+			[
+				"mo",
+				"movieEntry"
+			],
+			[
+				"movi",
+				"movieGenre"
+			],
+			[
+				"ope",
+				"operationMap"
+			],
+			[
+				"eve",
+				"eventual"
+			],
+			[
+				"consi",
+				"consistencyType"
+			],
+			[
+				"value",
+				"value"
+			],
+			[
+				"For",
+				"forward"
+			],
+			[
+				"comp",
+				"complete"
+			],
+			[
+				"sy",
+				"synchronized"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
+				"Fo",
+				"forwarded"
+			],
+			[
+				"for",
+				"for\tfor"
+			],
+			[
+				"forwa",
+				"forward"
+			],
+			[
+				"ad",
+				"adjustedTimestamp"
+			],
+			[
+				"to",
+				"toString"
+			],
+			[
+				"times",
+				"timestamp"
+			],
+			[
+				"put",
+				"putValueIntoDataCenter"
+			],
+			[
+				"data",
+				"dataCenter"
+			],
+			[
+				"hash",
+				"hashRegion"
+			],
+			[
+				"ha",
+				"hashFunction"
+			],
+			[
+				"remo",
+				"removeOperation"
+			],
+			[
+				"op",
+				"operationMap"
+			],
+			[
+				"operation",
+				"operation"
+			],
+			[
+				"opera",
+				"operation"
+			],
+			[
+				"Pri",
+				"PriorityBlockingQueque"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"m",
+				"main\tmethod (main)"
+			],
+			[
+				"threa",
+				"thread_put_1"
+			],
+			[
+				"a",
+				"available"
+			],
+			[
+				"Stri",
+				"StringBuffer"
+			],
+			[
+				"art",
+				"artist_id"
+			],
+			[
+				"D",
+				"DESC"
+			],
+			[
+				"row",
+				"row_num"
+			],
+			[
+				"arti",
+				"artist_id"
+			],
+			[
+				"tra",
+				"track_id"
+			],
+			[
+				"sal",
+				"sales_count"
+			],
+			[
+				"ec2",
+				"ec2conn"
+			],
+			[
+				"group",
+				"group_name"
+			],
+			[
+				"LB",
+				"lb_dns"
+			],
+			[
+				"SG",
+				"SG_LB_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "manage.py",
+			"settings":
+			{
+				"buffer_size": 808,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 227.0,
+		"last_filter": "livere",
+		"selected_items":
+		[
+			[
+				"livere",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"live",
+				"LiveReload: Help"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Indexing Status"
+			],
+			[
+				"liveReload",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"livereload",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"li",
+				"LiveReload: Help"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"LiveReload: Enable/disable plugi",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"LiveReload: en",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"liveReloads",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Disable Package"
+			],
+			[
+				"omni",
+				"OmniMarkupPreviewer: Export Current Markup as HTML"
+			],
+			[
+				"o",
+				"OmniMarkupPreviewer: Empty Cache"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import  urllib.request,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));open(os.path.join(ipp,pf),'wb').write(urllib.request.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/oscar/GoogleDrive/capstone-qr-code-site/qrcodesite"
+	],
+	"file_history":
+	[
+		"/Users/oscar/Documents/Hexo/source/_posts/art/书摘-此间的少年.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/书摘-牧羊少年的奇幻之旅.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/leetcode/Leetcode-414.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/leetcode/Leetcode-035.md",
+		"/Users/oscar/Documents/Hexo/source/_drafts/【影评】《大鱼海棠》.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/My-Movie-List.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/leetcode/Leetcode-028.md",
+		"/Users/oscar/Documents/Hexo/source/_drafts/混乱人生中的灯塔.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/philosophy/：",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】城南旧事.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/句子迷.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】你还太年轻.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】立春.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】雨水.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/My-Book-List.md",
+		"/Users/oscar/Documents/Hexo/source/_drafts/回国找工作.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/cbnweekly/第一财经周刊-摘记.md",
+		"/Users/oscar/Documents/Hexo/source/_drafts/笔记-公开课-哈佛正义课.md",
+		"/Users/oscar/Documents/Hexo/source/_drafts/？",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/书摘-不能承受的生命之轻.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/笔记-纪录片-木心物语.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/书摘-汪曾祺-人间草木.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/java/Core_Java.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/One_Way_Street摘记.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/书摘-张爱玲-小团圆.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/笔记-电视剧-帝术.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】大寒.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/java/Java-Logger学习.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】痴爱深深-再把豪情相加.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/书摘-夏目漱石-我是猫.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/笔记-汪曾祺-老人情.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/书摘-斯通纳.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/书评-严歌苓-陆犯焉识.md",
+		"/Users/oscar/Documents/Hexo/themes/next/_config.yml",
+		"/Users/oscar/Documents/Hexo/source/_drafts/capstone.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/webapplication/node.js.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/webapplication/codecademy_js.md",
+		"/Users/oscar/Documents/Hexo/source/_drafts/regex-golf.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-static-file.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/leetcode/Leetcode-019.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-learning.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】立冬.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】小寒.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】小雪.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】五月骄阳.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】大雪.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】冬至.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-wsgi-ngix.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/cmu-95702-projects-review.md",
+		"/Users/oscar/Documents/Hexo/source/algorithm/index.md",
+		"/Users/oscar/Documents/Hexo/source/_drafts/【随笔】大寒.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/webapplication/introduction_to_CSS.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-forms.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/webapplication/materialize-css.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-materialize.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-userena.md",
+		"/Users/oscar/Documents/Hexo/_config.yml",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/python-formset.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/python-tools.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-sending-email.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-load-data-fixture.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-customizing_authentication.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-bootstrap3.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-ajax-address.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/python-loaddata.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/django-sqlite-shell.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/webapplication/codecademy_jquery.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/general-development/mastering-regex.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/笔记-阿越-新宋.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/笔记-纪录片-河西走廊.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/书摘-徐贲-人以什么理由来记忆.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/笔记-纪录片-我在故宫修文物.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-the-algorithm-design-manual.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/leetcode/Leetcode-001.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】帝术.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/general-development/mastering-regex.MD",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/：",
+		"/Users/oscar/Documents/Hexo/source/_posts/django/customizing_authentication.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/tool/python-tools.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/webapplication/django_learning.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/general-development/regex-golf.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-approximation.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-final-review.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-aster.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-bfs-dfs.md",
+		"/Users/oscar/Documents/Hexo/source/_drafts/笔记-纪录片-我在故宫修文物.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-network-flows.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-linear-programming.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-max-flow-extensions.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-image-segmentation.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-bipartite-matching.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/cmu-95702-transaction.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/cmu-95702-remote-invocation.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/cmu-95702-final-review.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/cmu-95702-cryptography.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/cmu-95702-interprocess-communication.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-dynamic-summary.md",
+		"/Users/oscar/Documents/Hexo/source/_drafts/笔记-纪录片-茶-一片树叶的故事.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-segemented-least-squre.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-subset-sum.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/art/笔记-纪录片-唐之韵.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/cmu-95702-service-design.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-skip-list.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-bellman-ford.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-dijkstra.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/0-alibaba-dubbo.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/algorithm/algorithm-15650-np.md",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/cmu-95702-project6.md",
+		"/Users/oscar/Downloads/PITPlayerModel1.java",
+		"/Users/oscar/Downloads/PITPlayerModel.java",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】零碎生活.md",
+		"/Users/oscar/Downloads/Harry.Potter.and.the.Sorcerer's.Stone.2001.Extended.Cut.BluRay.720P.DTS.x264-CHD.chs.srt",
+		"/Users/oscar/NetBeansProjects/Fall2016Project6/.gitignore",
+		"/Users/oscar/Documents/Hexo/source/_posts/diary/【随笔】再也遇不见这样的你.md",
+		"/Users/oscar/.bash_profile",
+		"/private/etc/paths",
+		"/Users/oscar/Downloads/wolfprince-blue-2016-11-27T15:42:21.047853-links.csv",
+		"/Users/oscar/Downloads/wolfprince-blue-2016-11-26T23:45:41.816989-links.csv",
+		"/Users/oscar/Documents/Hexo/node_modules/nib/node_modules/stylus/lib/functions/index.js",
+		"/Users/oscar/Downloads/test/OaklandCrimeStats.java",
+		"/Users/oscar/Downloads/OaklandCrimeStats.java",
+		"/Users/oscar/Documents/Hexo/source/_posts/distribute-system/cmu-95702-project5.md",
+		"/Users/oscar/Downloads/test/OaklandCrimeStatsMapper.java",
+		"/Users/oscar/Google Drive/00CourseMaterials_Drive/01-DistributedSystem/project5/Project5/Task5/MinTemperatureReducer.java",
+		"/Users/oscar/Google Drive/00CourseMaterials_Drive/01-DistributedSystem/project5/Project5/Task5/MinTemperatureMapper.java",
+		"/Users/oscar/Google Drive/00CourseMaterials_Drive/01-DistributedSystem/project5/Project5/Task5/MinTemperature.java",
+		"/Users/oscar/Google Drive/00CourseMaterials_Drive/01-DistributedSystem/project5/Project5/Task5/Task5Output",
+		"/Users/oscar/Google Drive/00CourseMaterials_Drive/01-DistributedSystem/project5/Project5/Task4/Task4Output"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"牧羊少年的奇幻之旅",
+			"/",
+			"02.2",
+			". ",
+			"# 第一",
+			"user.",
+			"_",
+			"visi",
+			"{% asset_link",
+			"asset_img",
+			"2016\\.[0-9]$",
+			"^2016\\.[0-9]$",
+			"^2016\\.*[0-9]$",
+			"^2016.*[0-9]$",
+			"# ",
+			"duoshuo",
+			"duo'shuo",
+			"鞭炮",
+			"git",
+			"***\n***",
+			"# 第",
+			"{{ form }}",
+			"A.after(B)",
+			"表示之前的紧邻元素出现一次或多次",
+			"/",
+			">           95702",
+			"95702-",
+			"#",
+			"- ",
+			"signup",
+			"sign",
+			"## ",
+			"   ",
+			"z-depth-",
+			"z-depth",
+			"/",
+			"urlpatterns",
+			"csrf_token",
+			"() ",
+			"##",
+			"¶",
+			"crea",
+			"//",
+			"点",
+			"定点",
+			"*",
+			"nextEdge",
+			"最后找到的",
+			"按照后进先出的顺",
+			"$T$",
+			"$y$",
+			"$i$",
+			"M",
+			" ",
+			"Correct",
+			"a",
+			"–",
+			"• ",
+			"–",
+			"•",
+			"hdfs",
+			"• ",
+			")",
+			") ",
+			"## ",
+			"item",
+			"$S'$",
+			"$j$",
+			"http:",
+			"##",
+			"•  ",
+			"K",
+			"may",
+			"K",
+			")",
+			"（",
+			"K",
+			"•  ",
+			"- ",
+			"•  ",
+			"K",
+			"\\$*\\$",
+			"^\\$*\\$$",
+			"^[a-f]+$",
+			"✔",
+			"\\$%\\$",
+			"$%$",
+			"加密算法",
+			"platforms",
+			"mobile",
+			"chapter 2",
+			"# ",
+			"ports",
+			"final",
+			"– ",
+			"##",
+			"url",
+			"j's'p",
+			"•",
+			"<crlf>",
+			"<crlf> ",
+			".",
+			"1. ",
+			"- ",
+			"### ",
+			"## 2",
+			"## ",
+			"###",
+			"##",
+			"Chapter",
+			"11",
+			"9",
+			"8",
+			"Connecting up the paths. cont.",
+			"5",
+			"Connecting up the paths",
+			"4",
+			"Hooking in the Clauses",
+			"Gadget Representing the Variables",
+			"。",
+			"!",
+			"。",
+			"[",
+			";",
+			"。",
+			"?",
+			"。",
+			" "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"next",
+			"StringBuffer"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "manage.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 808,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 74.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/C.sublime-build",
+	"project": "qrcodesite.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"menue",
+				"node_modules/ejs/test/fixtures/menu.ejs"
+			],
+			[
+				"dao",
+				"~/Documents/Hexo/source/_posts/java/搭框架SpringMVC-Mybatis-Dubbo-MySQL.md"
+			],
+			[
+				"",
+				"~/Documents/Hexo/source/_posts/Elasticsearch源码分析.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 238.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 1
+	}
+}
