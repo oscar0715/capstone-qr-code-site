@@ -9,7 +9,33 @@ Pittsburgh Airport
 	<link rel="stylesheet" href="{% static 'mainsite/index.css' %}">
 {% endblock %}
 
+{% block parallax %}
+<div id="image-cover">
+	<div id="index-banner" class="parallax-container">
+		
+		<div class="section no-pad-bot center-align">
+			<br><br>
+			<p>
+				<img src="http://www.flypittsburgh.com/App_Themes/FlyPitt/Images/logo-pitt-white.svg">
+			</p>
+			<p>
+				<img src="https://personalrobotics.ri.cmu.edu/static/img/CMU_logo_horiz_red.png" width="30%">
+			</p>
+			
+
+			
+		</div>
+
+		<div class="parallax">
+			<img id="airport-image" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Pittsburgh_International_Airport_Airside_Terminal.jpg" alt="Pittsburgh International Airport">
+		</div>
+	</div>
+</div>
+				
+{% endblock %}
+
 {% block content %}
+<br><br>
 <div>
 	<iframe id="iFrame1" src="https://docs.google.com/forms/d/e/1FAIpQLSd5NCQVo5mkg3G5l_CVNzNpqKF9lGGorYuad02veb4kslbOcg/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
 </div>
