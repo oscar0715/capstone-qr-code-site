@@ -1,11 +1,14 @@
 #iFrame1 {
-
+	width : 100% ;
 	height : 700px ;
 }
 
 #airport-image {
 	width : 100% ;
-	
+}
+
+.form-container {
+	width: 100%
 }
 
 .parallax-container {
