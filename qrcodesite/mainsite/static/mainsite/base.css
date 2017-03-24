@@ -1,0 +1,12 @@
+#airport-image {
+	width : 100% ;
+}
+
+.parallax-container {
+  height: 400px;
+  width: 100%
+}
+
+#image-cover {
+	background-color: rgba(0, 0, 0, 0.6);
+}

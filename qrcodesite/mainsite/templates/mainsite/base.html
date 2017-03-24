@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+	<link rel="stylesheet" href="{% static 'mainsite/base.css' %}">
 
 	{% block meta %}{% endblock %}
 </head>
@@ -25,7 +26,25 @@
 	<main>
 		{% block body %}
 			{% block parallax %}
-				
+				<div id="image-cover" >
+					<div id="index-banner" class="parallax-container">
+						
+						<div class="section no-pad-bot center-align">
+							<br><br>
+							<p>
+								<img id="pitt-airport-logo" src="http://www.flypittsburgh.com/App_Themes/FlyPitt/Images/logo-pitt-white.svg">
+							</p>
+							<p>
+								<img id="cmu-logo" src="https://personalrobotics.ri.cmu.edu/static/img/CMU_logo_horiz_red.png" >
+							</p>
+							
+						</div>
+
+						<div class="parallax">
+							<img id="airport-image" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Pittsburgh_International_Airport_Airside_Terminal.jpg" alt="Pittsburgh International Airport">
+						</div>
+					</div>
+				</div>
 			{% endblock %}
 			
 			{% block content %}
@@ -42,6 +61,7 @@
 
 <script src="//code.jquery.com/jquery-2.1.2.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script> 
+<script type="text/javascript" src="{% static 'mainsite/base.js' %}"></script>
 
 {% block script %}{% endblock %}        
 
