@@ -1,0 +1,57 @@
+{% extends 'mainsite/base.html' %}
+{% load static %}
+
+{% block title %}
+Pittsburgh Airport
+{% endblock %}
+
+{% block meta %}
+	<!-- <link rel="stylesheet" href="{% static 'mainsite/index.css' %}"> -->
+{% endblock %}
+
+{% block content %}
+<br><br>
+<!-- <div class="container">
+	<div class="card">
+		<div class="card-image">
+			<img src="http://www.leedsbradfordairport.co.uk/media/1355/airport-15.jpg">
+			<span class="card-title">Welcome</span>
+		</div>
+		<div class="card-stacked">
+			<div class="card-content">
+				<p>This survey is part of research work of a Student Team at Carnegie Mellon University.</p>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<div class="container">
+	<div class="card-panel">
+		<form id="new_user_form" method="POST">
+			<div class="row">
+				{% csrf_token %}
+				<div class="input-field col s12">
+					<i class="material-icons prefix">email</i>
+					<input placeholder="Please Enter Your Email" id="id_email" name="email" type="text" class="" required="true"> 
+					<label for="first_name">Email</label>
+				</div>
+
+				<div class="input-field col 12 red-text right">
+					{{ form.email.errors }}
+				</div>
+			</div>
+		</form>
+		<div class="row">
+			<p class="center-align col s12">
+				<a class="grey darken-2 waves-effect waves-light btn " onclick="$('#new_user_form').submit()">提交</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+
+{% block script %}     
+
+{% endblock %} 
