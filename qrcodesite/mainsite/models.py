@@ -244,7 +244,7 @@ class ShopActivity(TimeStampedModel):
 		null=False
 	)
 
-	# How often
+	# Spending
 	spending_choices = (
 		('0', "$0 - $25"),
 		('25', "$25 - $50"),
@@ -252,7 +252,7 @@ class ShopActivity(TimeStampedModel):
 		('100', "$100+"),
 	)
 	spending = models.CharField( 
-		max_length = 2,
+		max_length =3,
 		choices= spending_choices, 
 		verbose_name ='Please choose your spending at the shopping area you have visited', 
 		default='Unspecified',
