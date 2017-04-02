@@ -68,10 +68,9 @@ def getForm(traveller, Model, ModelForm):
 	return alist
 
 def background(request):
-	if request.session.get('email', False):
+	email = request.session.get('email', None)
+	if email == None:
 		return redirect('mainsite:welcome')
-
-	email = request.session.get('email', False)
 
 	# We have the traveller object now
 	traveller = getTraveller(email)
@@ -99,10 +98,9 @@ def background(request):
 
 # Travel plan method
 def travelPlan(request):
-	if request.session.get('email', False):
+	email = request.session.get('email', None)
+	if email == None:
 		return redirect('mainsite:welcome')
-
-	email = request.session.get('email', False)
 
 	# We have the traveller object now
 	traveller = getTraveller(email)
@@ -131,7 +129,6 @@ def travelPlan(request):
 # Shop Activity
 def shopActivity(request):
 	email = request.session.get('email', None)
-	logging.debug("[email] = " + str(email))
 	if email == None:
 		return redirect('mainsite:welcome')
 
