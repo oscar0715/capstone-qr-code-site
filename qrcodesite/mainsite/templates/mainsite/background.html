@@ -48,7 +48,7 @@ Background Information
 					name="other_status" 
 					type="text" 
 					placeholder="You can write your other status here"
-					value="{{form.other_status.value}}" 
+					value='{{form.other_status.value|default_if_none:""}}'
 				>
 				<label class="red-text text-darken-1">{{form.status.errors}}</label>
 			</div>

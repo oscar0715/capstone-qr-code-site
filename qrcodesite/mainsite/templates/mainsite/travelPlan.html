@@ -48,7 +48,7 @@ Travel Plan
 					name="other_purpose" 
 					type="text" 
 					placeholder="You can write your other purpose here"
-					value="{{form.other_purpose.value}}" 
+					value="{{form.other_purpose.value|default_if_none:""}}" 
 				>
 			</div>
 

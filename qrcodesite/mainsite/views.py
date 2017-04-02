@@ -54,18 +54,7 @@ def getTraveller(email):
 		traveller = Traveller.objects.create(email = email)
 	return traveller
 
-def getForm(traveller, Model, ModelForm):
-	try :
-		# aobject exits
-		aobject = Model.objects.get(traveller=traveller)
-		form = ModelForm(instance = aobject)
-	except Model.DoesNotExist:
-		# Object not exits
-		aobject = Model.objects.create(traveller = traveller)
-		form = ModelForm(instance = aobject)
 
-	alist = [aobject, form]
-	return alist
 
 def background(request):
 	email = request.session.get('email', None)
@@ -75,19 +64,23 @@ def background(request):
 	# We have the traveller object now
 	traveller = getTraveller(email)
 
-	alist = getForm(traveller, Background, BackgroundForm)
-	background = alist[0]
-	form = alist[1]
-		
-	# We have the background object now
+	background = None
+	try:
+		background = Background.objects.get(traveller = traveller)
+		form = BackgroundForm(instance=background)
+	except Background.DoesNotExist:
+		form = BackgroundForm()
+		# logging.debug("[background] = "+"None")
 
 	if request.method == "POST":
-		
-		# create a for base on the background object
-		form = BackgroundForm(request.POST, instance = background)
+
+		form = BackgroundForm(request.POST)
 		if form.is_valid():
+
 			# save update 
-			form.save()
+			background = form.save(commit=False)
+			background.traveller = traveller
+			background.save()
 			return redirect('mainsite:travelPlan')
 
 	dict = {
@@ -105,9 +98,18 @@ def travelPlan(request):
 	# We have the traveller object now
 	traveller = getTraveller(email)
 
-	alist = getForm(traveller, TravelPlan, TravelPlanForm)
-	travelPlan = alist[0]
-	form = alist[1]
+	# check whether has Backgound Object
+	try:
+		background = Background.objects.get(traveller = traveller)
+	except Background.DoesNotExist:
+		return redirect('mainsite:background')
+
+	travelPlan = None
+	try:
+		travelPlan = TravelPlan.objects.get(traveller = traveller)
+		form = TravelPlanForm(instance = travelPlan)
+	except TravelPlan.DoesNotExist:
+		form = TravelPlanForm()
 		
 	# We have the travel plan object now
 

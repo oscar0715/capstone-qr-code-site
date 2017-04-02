@@ -47,13 +47,12 @@ class Background(TimeStampedModel):
 		max_length = 1,
 		choices= status_choices, 
 		verbose_name ='What is your status?', 
-		default='Unspecified'
+		default='Unspecified',
 		)	
 	other_status = models.CharField(
 		max_length = 50, 
 		blank = True)
 
-	
 	# Age
 	age_choices = (
 		('1', "1 - 25"),
@@ -222,10 +221,11 @@ class Shop(TimeStampedModel):
 
 class ShopActivity(TimeStampedModel):
 	# Traveller
-	traveller = models.OneToOneField(
-		Traveller,
+	traveller = models.ForeignKey(
+		'Traveller',
 		on_delete=models.CASCADE,
-		null=False,
+		default='Unspecified',
+		null=False
 	)
 
 	area = models.ForeignKey(
