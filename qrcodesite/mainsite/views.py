@@ -30,7 +30,7 @@ def securityGateWelcome(request):
 				# redict to another page
 				request.session['email'] = email
 
-				return render(request, 'mainsite/next.html', {})
+				return redirect('mainsite:thankyou')
 
 			except Traveller.DoesNotExist:
 				# If there is no such email.
@@ -118,8 +118,14 @@ def travelPlan(request):
 		if form.is_valid():
 			# save update 
 			form.save()
-			return next(request)
 
+			# check whether visited shopactivity page
+			shopactivityVisited = request.session.get('shopactivity', None)
+			if shopactivityVisited == None:
+				return redirect('mainsite:thankyou')
+			else :
+				return redirect('mainsite:shopActivity')
+			
 	dict = {
 		'email' : email,
 		'form' : form,
@@ -128,12 +134,38 @@ def travelPlan(request):
 
 # Shop Activity
 def shopActivity(request):
+
+	#  Mark Visited
+ 	request.session['shopactivity'] = True
+
+ 	# Check whether have email
 	email = request.session.get('email', None)
 	if email == None:
+		# if not go to register one
 		return redirect('mainsite:welcome')
 
 	# We have the traveller object now
 	traveller = getTraveller(email)
+
+	# Check backgournd
+	try :
+		# background exits
+		background = Background.objects.get(traveller=traveller)
+		# this Ok
+	except Background.DoesNotExist:
+		# background not exits
+		# go to the background page
+		return redirect('mainsite:background')
+
+	# check Travel Plan
+	try :
+		# Travel Plan exits
+		travelPlan = TravelPlan.objects.get(traveller=traveller)
+		# this Ok
+	except TravelPlan.DoesNotExist:
+		# Travel Plan not exits
+		# go to Travel Plan
+		return redirect('mainsite:travelPlan')
 
 	form = ShopActivityForm()
 
@@ -160,7 +192,7 @@ def shopActivity(request):
 		if form.is_valid():
 			# save update 
 			form.save()
-			return next(request)
+			return redirect('mainsite:thankyou')
 
 	dict = {
 		'email' : email,
@@ -210,6 +242,6 @@ def getShopSpending(request):
 
 
 
-def next(request):
-	return render(request, 'mainsite/next.html', {})
+def thankyou(request):
+	return render(request, 'mainsite/thankyou.html', {})
 	
