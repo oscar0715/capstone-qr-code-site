@@ -225,20 +225,23 @@ class ShopActivity(TimeStampedModel):
 	traveller = models.OneToOneField(
 		Traveller,
 		on_delete=models.CASCADE,
-		primary_key=True,
+		null=False,
 	)
 
 	area = models.ForeignKey(
 		'Area',
 		on_delete=models.CASCADE,
 		verbose_name ='Please choose your Area', 
-		
+		default='Unspecified',
+		null=False
 	)
 
 	shop = models.ForeignKey(
 		'Shop',
 		on_delete=models.CASCADE,
 		verbose_name ='Please choose your Shop', 
+		default='Unspecified',
+		null=False
 	)
 
 	# How often
@@ -251,8 +254,9 @@ class ShopActivity(TimeStampedModel):
 	spending = models.CharField( 
 		max_length = 2,
 		choices= spending_choices, 
-		verbose_name ='Please choose your spending at the shopping area you have visited.', 
-		default='Unspecified'
+		verbose_name ='Please choose your spending at the shopping area you have visited', 
+		default='Unspecified',
+		blank=False
 		)
 
 

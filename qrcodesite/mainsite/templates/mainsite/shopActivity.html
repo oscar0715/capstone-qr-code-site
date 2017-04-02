@@ -13,7 +13,7 @@ Spending Information
 <br><br>
 
 <div class="container">
-	<div class="card-panel">
+	<div class="card-panel row">
 		<div class="red-text text-darken-1">
 			* Required
 		</div>
@@ -23,12 +23,45 @@ Spending Information
 		<form id="form" action="#" method="POST">
 			{% csrf_token %}
 
+			<div 
+				{% if form.area.errors %}
+					class="question-div red lighten-5 s12 m6"
+				{% else %}
+					class="question-div col s12 m6"
+				{% endif %}
+			>
+				<h5>{{form.area.label}}:
+					<span class="red-text text-darken-1">*</span>
+				</h5>
+				
+				{{form.area}}
+				<label class="red-text text-darken-1">{{form.area.errors}}</label>
+			</div>
+			
+			<div 
+				{% if form.shop.errors %}
+					class="question-div red lighten-5 s12 m6"
+				{% else %}
+					class="question-div col s12 m6"
+				{% endif %}
+			>
+				<h5>{{form.shop.label}}:
+					<span class="red-text text-darken-1">*</span>
+				</h5>
+				
+				{{form.shop}}
+				<label class="red-text text-darken-1">{{form.shop.errors}}</label>
+			</div>
+
+			<br><br>
+			
+
 			<!-- spending -->
 			<div 
 				{% if form.spending.errors %}
-					class="question-div red lighten-5 "
+					class="question-div red lighten-5 col s12"
 				{% else %}
-					class="question-div"
+					class="question-div col s12"
 				{% endif %}
 			>
 				<h5>{{form.spending.label}}:
@@ -42,7 +75,7 @@ Spending Information
 				    </label>
 				</p>
 				{% endfor %}
-				<label class="red-text text-darken-1">{{form.status.errors}}</label>
+				<label class="red-text text-darken-1">{{form.spending.errors}}</label>
 			</div>
 			<br><br>
 			
@@ -59,5 +92,5 @@ Spending Information
 
 
 {% block script %}     
-
+<script type="text/javascript" src="{% static 'mainsite/shopActivity.js' %}"></script>
 {% endblock %} 

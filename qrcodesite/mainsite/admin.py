@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from .models import Traveller, Background, TravelPlan, Area, Shop, ShopActivity
+from .models import Traveller, Background, TravelPlan, Area, Shop
+from .models import ShopActivity
 
 # Register your models here.
 

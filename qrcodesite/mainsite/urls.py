@@ -9,6 +9,9 @@ app_name = 'mainsite'
 urlpatterns = [
 	url(r'^index$', views.index, name='index'),
 	url(r'^welcome$', views.securityGateWelcome, name='welcome'),
-	url(r'^backgroundinfo/$', views.backgroundInfo, name='backgroundInfo'),
-	url(r'^travelplan/$', views.travelPlan, name='travelPlan')
+	url(r'^background/$', views.background, name='background'),
+	url(r'^travelplan/$', views.travelPlan, name='travelPlan'),
+	url(r'^shopactivity/$', views.shopActivity, name='shopActivity'),
+	url(r'^getShopList/$', views.getShopList, name='getShopList'),
+	url(r'^getShopSpending/$', views.getShopSpending, name='getShopSpending')
 ]

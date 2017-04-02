@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse, redirect
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 
 from .models import Traveller, Background, TravelPlan
@@ -7,7 +7,7 @@ from .forms import TravellerForm, BackgroundForm, TravelPlanForm
 from .models import Area, Shop, ShopActivity
 from .forms import ShopActivityForm
 
-# Create your views here.
+import json
 
 import logging
 logger = logging.getLogger(__name__)
@@ -28,6 +28,8 @@ def securityGateWelcome(request):
 			try:
 				traveller = Traveller.objects.get(email = email)
 				# redict to another page
+				request.session['email'] = email
+
 				return render(request, 'mainsite/next.html', {})
 
 			except Traveller.DoesNotExist:
@@ -39,7 +41,9 @@ def securityGateWelcome(request):
 				# User cookie to store the email
 				request.session['email'] = email
 
-				return redirect('mainsite:backgroundInfo')
+				logging.debug("[welcome email ] = " + str(request.session.get('email', False)))
+
+				return redirect('mainsite:background')
 
 	return render(request, 'mainsite/securityGateWelcome.html', {'form':form}) 
 
@@ -63,8 +67,11 @@ def getForm(traveller, Model, ModelForm):
 	alist = [aobject, form]
 	return alist
 
-def backgroundInfo(request):
-	email = request.session['email']
+def background(request):
+	if request.session.get('email', False):
+		return redirect('mainsite:welcome')
+
+	email = request.session.get('email', False)
 
 	# We have the traveller object now
 	traveller = getTraveller(email)
@@ -88,11 +95,14 @@ def backgroundInfo(request):
 		'email' : email,
 		'form' : form,
 	}
-	return render(request, 'mainsite/backgroundInfo.html', dict)
+	return render(request, 'mainsite/background.html', dict)
 
 # Travel plan method
 def travelPlan(request):
-	email = request.session['email']
+	if request.session.get('email', False):
+		return redirect('mainsite:welcome')
+
+	email = request.session.get('email', False)
 
 	# We have the traveller object now
 	traveller = getTraveller(email)
@@ -119,31 +129,89 @@ def travelPlan(request):
 	return render(request, 'mainsite/travelPlan.html', dict)
 
 # Shop Activity
-# def shopActivity(request):
-# 	email = request.session['email']
+def shopActivity(request):
+	email = request.session.get('email', None)
+	logging.debug("[email] = " + str(email))
+	if email == None:
+		return redirect('mainsite:welcome')
 
-# 	# We have the traveller object now
-# 	traveller = getTraveller(email)
+	# We have the traveller object now
+	traveller = getTraveller(email)
 
-# 	# alist = getForm(traveller, ShopActivity, ShopActivityForm)
-# 	# shopActivity = alist[0]
-# 	# form = alist[1]
+	form = ShopActivityForm()
 
-# 	if request.method == "POST":
+	if request.method == "POST":
+		areaId = request.POST.get('area')
+		shopId = request.POST.get('shop')
+
+		area = get_object_or_404(Area, pk = areaId)
+		shop = get_object_or_404(Shop, pk = shopId)
+
+		try:
+			shopActivity = ShopActivity.objects.get(
+			traveller=traveller,
+			shop = shop)
+		except ShopActivity.DoesNotExist:
+			shopActivity = ShopActivity.objects.create(
+				traveller = traveller,
+				shop = shop,
+				area = area)
 		
-# 		# create a for base on the shop activity object
-# 		form = TravelPlanForm(request.POST, instance = travelPlan)
+		# create a for base on the shop activity object
+		form = ShopActivityForm(request.POST, instance = shopActivity)
 		
-# 		if form.is_valid():
-# 			# save update 
-# 			form.save()
-# 			return next(request)
+		if form.is_valid():
+			# save update 
+			form.save()
+			return next(request)
 
-# 	dict = {
-# 		'email' : email,
-# 		'form' : form,
-# 	}
-# 	return render(request, 'mainsite/shopActivity.html', dict)
+	dict = {
+		'email' : email,
+		'form' : form,
+	}
+	return render(request, 'mainsite/shopActivity.html', dict)
+
+def getShopList(request):
+	results = Shop.objects.none()
+
+	areaId = request.GET.get('areaId', None)
+	area = get_object_or_404(Area, pk = areaId)
+
+	# get all the provinces
+	shops = Shop.objects.filter(area = area)
+	
+	list = []
+	for shop in shops:
+		c = {}
+		c['name'] = shop.name
+		c['shopId'] = shop.pk
+		list.append(c)
+
+	return HttpResponse(json.dumps(list),content_type = "application/json;charset=utf-8")
+
+def getShopSpending(request):
+
+	email = request.session.get('email', None)
+	traveller = get_object_or_404(Traveller, email = email)
+
+	shopId = request.GET.get('shopId', None)
+	shop = get_object_or_404(Shop, pk = shopId)
+	
+	shopActivity = None
+	try:
+		shopActivity = ShopActivity.objects.get(traveller = traveller, shop = shop)
+
+	except ShopActivity.DoesNotExist:
+		return HttpResponse(json.dumps({}),content_type = "application/json;charset=utf-8")
+
+	spending = shopActivity.spending
+	
+	dict = {
+		"value" : spending
+	}
+	return HttpResponse(json.dumps(dict),content_type = "application/json;charset=utf-8")
+
+
 
 def next(request):
 	return render(request, 'mainsite/next.html', {})
