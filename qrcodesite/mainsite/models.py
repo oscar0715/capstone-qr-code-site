@@ -30,10 +30,10 @@ class Traveller(TimeStampedModel):
 class Background(TimeStampedModel):
 	# Email
 	traveller = models.OneToOneField(
-        Traveller,
-        on_delete=models.CASCADE,
-        primary_key=True,
-    )
+		Traveller,
+		on_delete=models.CASCADE,
+		primary_key=True,
+	)
 
 	# Status
 	status_choices = (
@@ -85,13 +85,14 @@ class Background(TimeStampedModel):
 	def __str__(self):
 		return self.traveller.email 
 
+# Travel Plan
 class TravelPlan(TimeStampedModel):
 	# Email
 	traveller = models.OneToOneField(
-        Traveller,
-        on_delete=models.CASCADE,
-        primary_key=True,
-    )
+		Traveller,
+		on_delete=models.CASCADE,
+		primary_key=True,
+	)
 
 	# Travel Purpose
 	purpose_choices = (
@@ -191,3 +192,71 @@ class TravelPlan(TimeStampedModel):
 
 	def __str__(self):
 		return self.traveller.email 
+
+
+
+# Area
+class Area(TimeStampedModel):
+	
+	name = models.CharField( 
+		max_length = 50,
+		verbose_name ='Name', 
+	) 
+	def __str__(self):
+		return self.name
+
+# Shop
+class Shop(TimeStampedModel):
+	# Area
+	area = models.ForeignKey(
+		'Area',
+		on_delete=models.CASCADE,
+	)
+
+	name = models.CharField( 
+		max_length = 50,
+		verbose_name ='Name', 
+	) 
+	def __str__(self):
+		return self.name
+
+class ShopActivity(TimeStampedModel):
+	# Traveller
+	traveller = models.OneToOneField(
+		Traveller,
+		on_delete=models.CASCADE,
+		primary_key=True,
+	)
+
+	area = models.ForeignKey(
+		'Area',
+		on_delete=models.CASCADE,
+		verbose_name ='Please choose your Area', 
+		
+	)
+
+	shop = models.ForeignKey(
+		'Shop',
+		on_delete=models.CASCADE,
+		verbose_name ='Please choose your Shop', 
+	)
+
+	# How often
+	spending_choices = (
+		('0', "$0 - $25"),
+		('25', "$25 - $50"),
+		('50', "$50 - $100"),
+		('100', "$100+"),
+	)
+	spending = models.CharField( 
+		max_length = 2,
+		choices= spending_choices, 
+		verbose_name ='Please choose your spending at the shopping area you have visited.', 
+		default='Unspecified'
+		)
+
+
+	def __str__(self):
+		return self.traveller.email 
+		
+

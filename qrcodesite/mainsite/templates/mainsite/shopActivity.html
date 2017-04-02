@@ -1,0 +1,63 @@
+{% extends 'mainsite/base.html' %}
+{% load static %}
+
+{% block title %}
+Spending Information
+{% endblock %}
+
+{% block meta %}
+	<link rel="stylesheet" href="">
+{% endblock %}
+
+{% block content %}
+<br><br>
+
+<div class="container">
+	<div class="card-panel">
+		<div class="red-text text-darken-1">
+			* Required
+		</div>
+
+		<br><br>
+
+		<form id="form" action="#" method="POST">
+			{% csrf_token %}
+
+			<!-- spending -->
+			<div 
+				{% if form.spending.errors %}
+					class="question-div red lighten-5 "
+				{% else %}
+					class="question-div"
+				{% endif %}
+			>
+				<h5>{{form.spending.label}}:
+					<span class="red-text text-darken-1">*</span>
+				</h5>
+				{% for radio in form.spending %}
+				<p>  
+				    {{ radio.tag }}
+				    <label for="{{ radio.id_for_label }}">
+				    	{{ radio.choice_label }}
+				    </label>
+				</p>
+				{% endfor %}
+				<label class="red-text text-darken-1">{{form.status.errors}}</label>
+			</div>
+			<br><br>
+			
+		
+		</form>
+
+		<p class="center-align col s12">
+			<a class="grey darken-2 waves-effect waves-light btn " onclick="$('#form').submit()">Next</a>
+		</p>
+	</div>
+</div>
+
+{% endblock %}
+
+
+{% block script %}     
+
+{% endblock %} 
