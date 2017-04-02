@@ -1,7 +1,7 @@
 from django.forms import ModelForm
 from django import forms
 
-from .models import Traveller, Background
+from .models import Traveller, Background, TravelPlan
 
 
 
@@ -12,16 +12,25 @@ class TravellerForm(ModelForm):
 
 class BackgroundForm(ModelForm):
 
-	def __init__(self, *args, **kwargs):
-		super(BackgroundForm, self).__init__(*args, **kwargs)
-		self.fields['gender'].default = None
-		# self.initial['gender'] = 'M'
-
 	class Meta:
 		model = Background
-		fields = ('gender',)
+		exclude = ['traveller']
 		widgets = {
 			'gender': forms.RadioSelect,
+			'status': forms.RadioSelect,
+			'age': forms.RadioSelect,
+		}
+
+class TravelPlanForm(ModelForm):
+	class Meta:
+		model = TravelPlan
+		exclude = ['traveller']
+		widgets = {
+			'purpose': forms.RadioSelect,
+			'group': forms.RadioSelect,
+			'group_number': forms.RadioSelect,
+			'time_period': forms.RadioSelect,
+			'how_often': forms.RadioSelect,
 		}
 
 	

@@ -9,5 +9,6 @@ app_name = 'mainsite'
 urlpatterns = [
 	url(r'^index$', views.index, name='index'),
 	url(r'^welcome$', views.securityGateWelcome, name='welcome'),
-	url(r'^backgroundInfo/$', views.backgroundInfo, name='backgroundInfo')
+	url(r'^backgroundinfo/$', views.backgroundInfo, name='backgroundInfo'),
+	url(r'^travelplan/$', views.travelPlan, name='travelPlan')
 ]

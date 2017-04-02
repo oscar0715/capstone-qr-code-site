@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-Background Information
+Travel Plan
 {% endblock %}
 
 {% block meta %}
@@ -17,24 +17,23 @@ Background Information
 		<div class="red-text text-darken-1">
 			* Required
 		</div>
-
 		<br><br>
 
 		<form id="form" action="#" method="POST">
 			{% csrf_token %}
 
-			<!-- status -->
+			<!-- Travel Purpose -->
 			<div 
-				{% if form.status.errors %}
+				{% if form.purpose.errors %}
 					class="question-div red lighten-5 "
 				{% else %}
 					class="question-div"
 				{% endif %}
 			>
-				<h5>{{form.status.label}}:
+				<h5>{{form.purpose.label}}:
 					<span class="red-text text-darken-1">*</span>
 				</h5>
-				{% for radio in form.status %}
+				{% for radio in form.purpose %}
 				<p>  
 				    {{ radio.tag }}
 				    <label for="{{ radio.id_for_label }}">
@@ -42,21 +41,22 @@ Background Information
 				    </label>
 				</p>
 				{% endfor %}
+
 				<input 
-					id="id_other_status" 
+					id="id_other_purpose" 
 					maxlength="50" 
-					name="other_status" 
+					name="other_purpose" 
 					type="text" 
-					placeholder="You can write your other status here"
-					value="{{form.other_status.value}}" 
+					placeholder="You can write your other purpose here"
+					value="{{form.other_purpose.value}}" 
 				>
-				<label class="red-text text-darken-1">{{form.status.errors}}</label>
 			</div>
+
 			<br><br>
-			
+
 			<!-- Other fields -->
 			{% for field in form %}
-				{% if field != form.status and field != form.other_status %}
+				{% if field != form.purpose and field != form.other_purpose and field != form.airline and field != form.other_airline %}
 					<div 
 						{% if field.errors %}
 							class="question-div red lighten-5 "
@@ -81,6 +81,32 @@ Background Information
 					<br><br>
 				{% endif %}
 			{% endfor %}
+
+			<!-- Airline -->
+			<div 
+				{% if form.airline.errors %}
+					class="question-div red lighten-5 "
+				{% else %}
+					class="question-div"
+				{% endif %}
+			>
+				<h5>{{form.airline.label}}:
+					<span class="red-text text-darken-1">*</span>
+				</h5>
+				{{form.airline}}
+				<div>
+					<label class="red-text text-darken-1">{{form.airline.errors}}</label>
+				</div>
+				
+			</div>
+			
+
+			<br><br>
+			<div>
+				Thank you for providing Travel Plan Information.
+			</div>
+
+			<br><br>
 		</form>
 
 		<p class="center-align col s12">

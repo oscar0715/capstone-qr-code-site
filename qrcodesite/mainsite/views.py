@@ -1,8 +1,8 @@
 from django.shortcuts import render, reverse, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 
-from .models import Traveller, Background
-from .forms import TravellerForm, BackgroundForm
+from .models import Traveller, Background, TravelPlan
+from .forms import TravellerForm, BackgroundForm, TravelPlanForm
 
 # Create your views here.
 
@@ -13,7 +13,6 @@ def index(request):
 	return render(request, 'mainsite/index.html', {})
 
 def securityGateWelcome(request):
-	
 
 	if request.method == 'GET' :
 		form = TravellerForm()
@@ -43,31 +42,80 @@ def securityGateWelcome(request):
 
 def backgroundInfo(request):
 	email = request.session['email']
+
+	traveller = None
 	try:
 		traveller = Traveller.objects.get(email = email)
 	except Traveller.DoesNotExist:
 		traveller = Traveller.objects.create(email = email)
 
-	background = Background.objects.filter(traveller=traveller)
-	if background.count() == 0:
+	# We have the traveller object now
+
+	try :
+		# background exits
+		background = Background.objects.get(traveller=traveller)
+		form = BackgroundForm(instance = background)
+	except Background.DoesNotExist:
+		# background not exits
+		background = Background.objects.create(traveller = traveller)
+		form = BackgroundForm(instance = background)
 		
-		form = BackgroundForm()
-	else :
-		form = BackgroundForm(instance = background[0])
+	# We have the background object now
 
 	if request.method == "POST":
-		form = BackgroundForm(request.POST)
+		
+		# create a for base on the background object
+		form = BackgroundForm(request.POST, instance = background)
+		
 		if form.is_valid():
-			background = form.save(commit=False)
-			background.traveller = traveller
-			background.save()
-			return next(request)
+			# save update 
+			form.save()
+			return redirect('mainsite:travelPlan')
 
 	dict = {
 		'email' : email,
 		'form' : form,
 	}
 	return render(request, 'mainsite/backgroundInfo.html', dict)
+
+# Travel plan method
+def travelPlan(request):
+	email = request.session['email']
+
+	try:
+		traveller = Traveller.objects.get(email = email)
+	except Traveller.DoesNotExist:
+		traveller = Traveller.objects.create(email = email)
+
+	logging.debug("[traveller] = " + str(traveller))
+
+	# We have the traveller object now
+	try :
+		# travel plan exits
+		travelPlan = TravelPlan.objects.get(traveller=traveller)
+		form = TravelPlanForm(instance = travelPlan)
+	except TravelPlan.DoesNotExist:
+		# not exits
+		travelPlan = TravelPlan.objects.create(traveller = traveller)
+		form = TravelPlanForm(instance = travelPlan)
+		
+	# We have the travel plan object now
+
+	if request.method == "POST":
+		
+		# create a for base on the travel plan object
+		form = TravelPlanForm(request.POST, instance = travelPlan)
+		
+		if form.is_valid():
+			# save update 
+			form.save()
+			return next(request)
+
+	dict = {
+		'email' : email,
+		'form' : form,
+	}
+	return render(request, 'mainsite/travelPlan.html', dict)
 
 def next(request):
 	return render(request, 'mainsite/next.html', {})
