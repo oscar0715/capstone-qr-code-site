@@ -157,9 +157,7 @@ Spending Information
 					class="question-div col s12"
 				{% endif %}
 			>
-				<h5>{{form.why_not.label}}:
-					<span class="red-text text-darken-1">*</span>
-				</h5>
+				<h5>{{form.why_not.label}}:</h5>
 				{% for radio in form.why_not %}
 				<p>  
 					{{ radio.tag }}
@@ -209,7 +207,7 @@ Spending Information
 					placeholder="please specify other place"
 					value="{{form.other_will_visit.value|default_if_none:""}}" 
 				>
-				<label class="red-text text-darken-1">{{form.other_will_visit.errors}}</label><br><br>
+				<label class="red-text text-darken-1">{{form.will_visit.errors}}</label><br><br>
 			</div>
 
 			<!-- Other Service  -->

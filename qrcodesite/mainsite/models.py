@@ -383,8 +383,8 @@ class AirportActivity(TimeStampedModel):
 		('I', "Other"),
 	)
 
-	will_visit = models.CharField( 
-		max_length = 3,
+	will_visit = MultiSelectField( 
+		max_length = 10,
 		choices = will_visit_choices, 
 		verbose_name ='Where would you like to visit if you have enough time? Please choose your top 3 preferences.', 
 		blank = True,

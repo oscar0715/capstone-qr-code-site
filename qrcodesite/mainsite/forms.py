@@ -54,7 +54,7 @@ class AirportActivityForm(ModelForm):
 			'news_spending': forms.RadioSelect,
 			'kidsport_spending': forms.RadioSelect,
 			'other_spending': forms.RadioSelect,
-			'will_visit' : forms.RadioSelect,
+			# 'will_visit' : forms.RadioSelect,
 			'why_not' : forms.RadioSelect,
 		}
 	
