@@ -2,7 +2,7 @@ from django.forms import ModelForm
 from django import forms
 
 from .models import Traveller, Background, TravelPlan
-from .models import Area, Shop, ShopActivity
+from .models import Area, Shop, ShopActivity, AirportActivity
 
 
 
@@ -40,5 +40,21 @@ class ShopActivityForm(ModelForm):
 		exclude = ['traveller']
 		widgets = {
 			'spending': forms.RadioSelect,
+		}
+
+class AirportActivityForm(ModelForm):
+	class Meta:
+		model = AirportActivity
+		exclude = ['traveller']
+		widgets = {
+			'leisure_time': forms.RadioSelect,
+			'shopping_spending': forms.RadioSelect,
+			'coffee_shop_spending': forms.RadioSelect,
+			'bar_spending': forms.RadioSelect,
+			'news_spending': forms.RadioSelect,
+			'kidsport_spending': forms.RadioSelect,
+			'other_spending': forms.RadioSelect,
+			'will_visit' : forms.RadioSelect,
+			'why_not' : forms.RadioSelect,
 		}
 	

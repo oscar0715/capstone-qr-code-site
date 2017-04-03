@@ -1,0 +1,241 @@
+{% extends 'mainsite/base.html' %}
+{% load static %}
+
+{% block title %}
+Spending Information
+{% endblock %}
+
+{% block meta %}
+	<link rel="stylesheet" href="">
+{% endblock %}
+
+{% block content %}
+<br><br>
+
+<div class="container">
+	<div class="card-panel row">
+		<div class="red-text text-darken-1">
+			* Required<br><br>
+		</div>
+
+
+		<form id="form" action="#" method="POST">
+			{% csrf_token %}
+
+			<!-- spending -->
+			<div 
+				{% if form.leisure_time.errors %}
+					class="question-div red lighten-5 col s12"
+				{% else %}
+					class="question-div col s12"
+				{% endif %}
+			>
+				<h5>{{form.leisure_time.label}}:
+					<span class="red-text text-darken-1">*</span>
+				</h5>
+				{% for radio in form.leisure_time %}
+				<p>  
+					{{ radio.tag }}
+					<label for="{{ radio.id_for_label }}">
+						{{ radio.choice_label }}
+					</label>
+				</p>
+				{% endfor %}
+				<label class="red-text text-darken-1">{{form.leisure_time.errors}}</label><br><br>
+			</div>
+			
+
+
+			<!-- Spending Table -->
+			
+
+			<div
+				{% if form.coffee_shop_spending.errors or  form.bar_spending.errors or news_spending.errors or form.kidsport_spending.errors or form.other_spending.errors  or form.shopping_spending.errors %}
+					class="question-div red lighten-5 col s12"
+				{% else %}
+					class="question-div col s12"
+				{% endif %}
+			>
+				<table>
+				<h5>During your waiting time at the airport, where have you visited? Please choose your spending at each place you have visited. 
+					<span class="red-text text-darken-1">*</span>
+				</h5>
+				<thead>
+					<tr>
+						<th></th>
+					 	{% for radio in form.coffee_shop_spending %}
+						<th>  
+							{{ radio.choice_label }}
+						</th>
+						{% endfor %}
+					 </tr>
+					
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{form.shopping_spending.label}}:</td>
+						{% for radio in form.shopping_spending %}
+						<td>
+							{{ radio.tag }}
+							<label for="{{ radio.id_for_label }}"></label>
+						</td> 
+						{% endfor %}
+					</tr>
+
+					<tr>
+						<td>{{form.coffee_shop_spending.label}}:</td>
+						{% for radio in form.coffee_shop_spending %}
+						<td>
+							{{ radio.tag }}
+							<label for="{{ radio.id_for_label }}"></label>
+						</td> 
+						{% endfor %}
+					</tr>
+					
+					<tr>
+						<td>{{form.bar_spending.label}}:</td>
+						{% for radio in form.bar_spending %}
+						<td>
+							{{ radio.tag }}
+							<label for="{{ radio.id_for_label }}"></label>
+						</td> 
+						{% endfor %}
+					</tr>
+
+					<tr>
+						<td>{{form.news_spending.label}}:</td>
+						{% for radio in form.news_spending %}
+						<td>
+							{{ radio.tag }}
+							<label for="{{ radio.id_for_label }}"></label>
+						</td> 
+						{% endfor %}
+					</tr>
+
+					<tr>
+						<td>{{form.kidsport_spending.label}}:</td>
+						{% for radio in form.kidsport_spending %}
+						<td>
+							{{ radio.tag }}
+							<label for="{{ radio.id_for_label }}"></label>
+						</td> 
+						{% endfor %}
+					</tr>
+
+					<tr>
+						<td>{{form.other_spending.label}}:</td>
+						{% for radio in form.other_spending %}
+						<td>
+							{{ radio.tag }}
+							<label for="{{ radio.id_for_label }}"></label>
+						</td> 
+						{% endfor %}
+					</tr>
+				</tbody>
+				</table>
+
+				<input 
+					id="id_other_name" 
+					maxlength="50" 
+					name="other_name" 
+					type="text" 
+					placeholder="If you choose 'other' in the places you have visited, please specify:"
+					value="{{form.other_name.value|default_if_none:""}}" 
+				>
+
+				{% if form.coffee_shop_spending.errors or  form.bar_spending.errors or news_spending.errors or form.kidsport_spending.errors or form.other_spending.errors  or form.shopping_spending.errors %}
+				<label class="red-text text-darken-1">This question requires one response per row</label>
+
+				{% endif %}
+			</div>
+
+			<!-- Why Not -->
+			<div 
+				{% if form.why_not.errors %}
+					class="question-div red lighten-5 col s12"
+				{% else %}
+					class="question-div col s12"
+				{% endif %}
+			>
+				<h5>{{form.why_not.label}}:
+					<span class="red-text text-darken-1">*</span>
+				</h5>
+				{% for radio in form.why_not %}
+				<p>  
+					{{ radio.tag }}
+					<label for="{{ radio.id_for_label }}">
+						{{ radio.choice_label }}
+					</label>
+				</p>
+				{% endfor %}
+
+				<input 
+					id="id_other_why_not" 
+					maxlength="50" 
+					name="other_why_not" 
+					type="text" 
+					placeholder="If you choose 'other' in the places you have visited, please specify:"
+					value="{{form.other_why_not.value|default_if_none:""}}" 
+				>
+
+				<label class="red-text text-darken-1">{{form.why_not.errors}}</label><br><br>
+			</div>
+
+
+			<!-- If enough time -->
+			<div 
+				{% if form.will_visit.errors %}
+					class="question-div red lighten-5 col s12"
+				{% else %}
+					class="question-div col s12"
+				{% endif %}
+			>
+				<h5>{{form.will_visit.label}}:
+				</h5>
+				{% for radio in form.will_visit %}
+				<p>  
+					{{ radio.tag }}
+					<label for="{{ radio.id_for_label }}">
+						{{ radio.choice_label }}
+					</label>
+				</p>
+				{% endfor %}
+
+				<input 
+					id="id_other_will_visit" 
+					maxlength="50" 
+					name="other_will_visit" 
+					type="text" 
+					placeholder="please specify other place"
+					value="{{form.other_will_visit.value|default_if_none:""}}" 
+				>
+				<label class="red-text text-darken-1">{{form.other_will_visit.errors}}</label><br><br>
+			</div>
+
+			<!-- Other Service  -->
+			<div>
+				<h5>{{form.other_service.label}}:</h5>
+				<input 
+					id="id_other_service" 
+					maxlength="50" 
+					name="other_service" 
+					type="text" 
+					placeholder="Other than the places listed above, what other services would you like to have at the airport?
+					"
+					value="{{form.other_service.value|default_if_none:""}}" 
+				>
+			</div>
+		</form>
+
+		<p class="center-align col s12">
+			<a class="grey darken-2 waves-effect waves-light btn " onclick="$('#form').submit()">Next</a>
+		</p>
+	</div>
+</div>
+
+{% endblock %}
+
+
+{% block script %}     
+<script type="text/javascript" src="{% static 'mainsite/shopActivity.js' %}"></script>
+{% endblock %} 

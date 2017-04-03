@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .models import Traveller, Background, TravelPlan, Area, Shop
-from .models import ShopActivity
+from .models import ShopActivity, AirportActivity
 
 # Register your models here.
 
@@ -14,3 +14,4 @@ admin.site.register(TravelPlan, TimeAdmin)
 admin.site.register(Area, TimeAdmin)
 admin.site.register(Shop, TimeAdmin)
 admin.site.register(ShopActivity, TimeAdmin)
+admin.site.register(AirportActivity, TimeAdmin)

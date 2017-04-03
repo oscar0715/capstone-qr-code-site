@@ -263,4 +263,147 @@ class ShopActivity(TimeStampedModel):
 	def __str__(self):
 		return self.traveller.email 
 		
+class AirportActivity(TimeStampedModel):
+	# Traveller
+	traveller = models.OneToOneField(
+		Traveller,
+		on_delete=models.CASCADE,
+		primary_key=True,
+	)
+
+	# leisure_time
+	time_choices = (
+		('0', "< 30min"),
+		('0.5', "30min - 1h"),
+		('1', "1h - 2h"),
+		('2', "2h +"),
+	)
+	leisure_time = models.CharField( 
+		max_length =3,
+		choices= time_choices, 
+		verbose_name ='How much leisure time do you have before boarding?', 
+		default='Unspecified',
+		blank=False
+		)
+
+	# spending_choices
+	spending_choices = (
+		('-1', "I didn't visit this place."),
+		('0', "$0"),
+		('1', "$0 - $25"),
+		('25', "$25 - $50"),
+		('50', "$50 - $100"),
+		('100', "$100+"),
+	)
+
+	shopping_spending = models.CharField( 
+		max_length =3,
+		choices= spending_choices, 
+		verbose_name ='Shopping', 
+		default='Unspecified',
+		blank=False
+		)
+
+	coffee_shop_spending = models.CharField( 
+		max_length =3,
+		choices= spending_choices, 
+		verbose_name ='Coffee Shop', 
+		default='Unspecified',
+		blank=False
+		)
+
+	bar_spending = models.CharField( 
+		max_length =3,
+		choices= spending_choices, 
+		verbose_name ='Bar/Dining', 
+		default='Unspecified',
+		blank=False
+		)
+	news_spending = models.CharField( 
+		max_length =3,
+		choices= spending_choices, 
+		verbose_name ='News/Gift/Book Shop', 
+		default='Unspecified',
+		blank=False
+		)
+	kidsport_spending = models.CharField( 
+		max_length =3,
+		choices= spending_choices, 
+		verbose_name ="KidsPort (Children's Play Area)", 
+		default='Unspecified',
+		blank=False
+		)
+	other_spending = models.CharField( 
+		max_length =3,
+		choices= spending_choices, 
+		verbose_name ='Other', 
+		default='Unspecified',
+		blank=False
+		)
+
+	other_name = models.CharField( 
+		max_length =50,
+		verbose_name ='If you choose "other" in the places you have visited, please specify', 
+		blank=True
+		)
+
+	# Why Not
+	why_not_choices = (
+		('A', "Shops far from waiting area"),
+		('B', "Shops are not appealing"),
+		('C', "Do not have enough time"),
+		('D', "Prefer to be at my gate"),
+		('E', "Too expensive"),
+		('F', "Other"),
+	)
+
+	why_not = models.CharField( 
+		max_length =1,
+		choices= why_not_choices, 
+		verbose_name ='If you did not visit any of these areas, why not?', 
+		blank = True,
+		)
+
+	other_why_not = models.CharField( 
+		max_length =200,
+		verbose_name ='If you choose "other" in the places you have visited, please specify', 
+		blank=True
+		)
+
+	# will visit
+	will_visit_choices = (
+		('A', "Shopping (Apparels, Cosmetics, duty-free etc.)"),
+		('B', "Coffee Shop"),
+		('C', "Bar/Dining"),
+		('D', "News/Gift/Book Shop"),
+		('E', "Convenience Store"),
+		('F', "Vending Machine"),
+		('G', "KidsPort (Children's Play Area)"),
+		('H', "24*7 Grocery Store"),
+		('I', "Other"),
+	)
+
+	will_visit = models.CharField( 
+		max_length = 3,
+		choices = will_visit_choices, 
+		verbose_name ='Where would you like to visit if you have enough time? Please choose your top 3 preferences.', 
+		blank = True,
+		)
+
+	other_will_visit = models.CharField( 
+		max_length =200,
+		verbose_name ='', 
+		blank=True
+		)
+
+	# ask for other service
+	other_service = models.CharField( 
+		max_length =300,
+		verbose_name ='Other than the places listed above, what other services would you like to have at the airport?', 
+		blank=True
+		)
+
+	def __str__(self):
+		return self.traveller.email 
+
 

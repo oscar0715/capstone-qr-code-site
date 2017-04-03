@@ -4,8 +4,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .models import Traveller, Background, TravelPlan
 from .forms import TravellerForm, BackgroundForm, TravelPlanForm
 
-from .models import Area, Shop, ShopActivity
-from .forms import ShopActivityForm
+from .models import Area, Shop, ShopActivity, AirportActivity
+from .forms import ShopActivityForm, AirportActivityForm
 
 import json
 
@@ -120,6 +120,11 @@ def travelPlan(request):
 		if form.is_valid():
 			# save update 
 			form.save()
+
+			# check whether visited airportactivity page
+			shopactivityVisited = request.session.get('airportactivity', None)
+			if not shopactivityVisited == None:
+				return redirect('mainsite:airportActivity')
 
 			# check whether visited shopactivity page
 			shopactivityVisited = request.session.get('shopactivity', None)
@@ -242,7 +247,48 @@ def getShopSpending(request):
 	}
 	return HttpResponse(json.dumps(dict),content_type = "application/json;charset=utf-8")
 
+# Airport Activity method
+def airportActivity(request):
+	#  Mark Visited
+ 	request.session['airportactivity'] = True
 
+	email = request.session.get('email', None)
+	if email == None:
+		return redirect('mainsite:welcome')
+
+	# We have the traveller object now
+	traveller = getTraveller(email)
+
+	# check whether has Backgound Object
+	try:
+		background = Background.objects.get(traveller = traveller)
+	except Background.DoesNotExist:
+		return redirect('mainsite:background')
+
+	airportActivity = None
+	try:
+		airportActivity = AirportActivity.objects.get(traveller = traveller)
+		form = AirportActivityForm(instance = airportActivity)
+	except AirportActivity.DoesNotExist:
+		form = AirportActivityForm()
+		
+	# We have the Airport Activity object now
+
+	if request.method == "POST":
+		
+		# create a for base on the Airport Activity object
+		form = AirportActivityForm(request.POST, instance = airportActivity)
+		if form.is_valid():
+			# save update 
+			form.save()
+
+			return redirect('mainsite:thankyou')
+			
+	dict = {
+		'email' : email,
+		'form' : form,
+	}
+	return render(request, 'mainsite/airportActivity.html', dict)
 
 def thankyou(request):
 	return render(request, 'mainsite/thankyou.html', {})
