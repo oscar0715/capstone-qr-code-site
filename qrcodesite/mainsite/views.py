@@ -291,5 +291,7 @@ def airportActivity(request):
 	return render(request, 'mainsite/airportActivity.html', dict)
 
 def thankyou(request):
-	return render(request, 'mainsite/thankyou.html', {})
+	email = request.session.get('email', None)
+
+	return render(request, 'mainsite/thankyou.html', {'email':email})
 	

@@ -177,6 +177,7 @@ class TravelPlan(TimeStampedModel):
 		('FR', "Frontier"),
 		('OJ', "OneJet"),
 		('PO', "Porter"),
+		('SP', "Spirit"),
 		('SW', "Southwest"),
 		('SA', "Southern Airways Express"),
 		('UA', "United Airlines"),
@@ -231,7 +232,7 @@ class ShopActivity(TimeStampedModel):
 	area = models.ForeignKey(
 		'Area',
 		on_delete=models.CASCADE,
-		verbose_name ='Please choose your Area', 
+		verbose_name ='Please select your current location', 
 		default='Unspecified',
 		null=False
 	)
