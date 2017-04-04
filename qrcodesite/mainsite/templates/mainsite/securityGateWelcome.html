@@ -11,22 +11,12 @@ Pittsburgh Airport
 
 {% block content %}
 <br><br>
-<!-- <div class="container">
-	<div class="card">
-		<div class="card-image">
-			<img src="http://www.leedsbradfordairport.co.uk/media/1355/airport-15.jpg">
-			<span class="card-title">Welcome</span>
-		</div>
-		<div class="card-stacked">
-			<div class="card-content">
-				<p>This survey is part of research work of a Student Team at Carnegie Mellon University.</p>
-			</div>
-		</div>
-	</div>
-</div> -->
-
 <div class="container">
 	<div class="card-panel">
+		<div>
+			This survey is part of research work of a Student Team at Carnegie Mellon University. Please told us your email. Then after you complete the survey, you will have an opportunity to win a $250 gift card. And if you win it, we will contact you by the email.
+		</div><br><br>
+
 		<form id="new_user_form" method="POST">
 			<div class="row">
 				{% csrf_token %}
@@ -40,7 +30,12 @@ Pittsburgh Airport
 					{{ form.email.errors }}
 				</div>
 			</div>
-		</form>
+		</form><br><br>
+
+		<div>
+			If you agree that your responses will be used in this research, click 'NEXT' to continue the survey! Thank you!
+		</div><br><br>
+
 		<div class="row">
 			<p class="center-align col s12">
 				<a class="grey darken-2 waves-effect waves-light btn " onclick="$('#new_user_form').submit()">Next</a>
