@@ -7,7 +7,7 @@ app_name = 'mainsite'
 
 
 urlpatterns = [
-	url(r'^index$', views.index, name='index'),
+	# url(r'^index$', views.index, name='index'),
 	url(r'^welcome$', views.securityGateWelcome, name='welcome'),
 	url(r'^background/$', views.background, name='background'),
 	url(r'^travelplan/$', views.travelPlan, name='travelPlan'),

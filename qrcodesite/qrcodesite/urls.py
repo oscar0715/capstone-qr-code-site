@@ -20,7 +20,7 @@ import mainsite
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', ms_views.index),
+    # url(r'^$', ms_views.index),
 
     # mainsite
 	url(r'^survey/', include('mainsite.urls')),
