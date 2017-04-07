@@ -14,3 +14,7 @@
 .question-div {
     padding: 10px 10px 10px 10px; 
 }
+
+.question-table{
+	overflow-x: scroll;
+}
