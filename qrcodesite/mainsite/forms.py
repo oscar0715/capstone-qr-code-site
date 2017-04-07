@@ -32,6 +32,7 @@ class TravelPlanForm(ModelForm):
 			'group_number': forms.RadioSelect,
 			'time_period': forms.RadioSelect,
 			'how_often': forms.RadioSelect,
+			'airline': forms.Select(attrs={'class':'browser-default'})
 		}
 
 class ShopActivityForm(ModelForm):
