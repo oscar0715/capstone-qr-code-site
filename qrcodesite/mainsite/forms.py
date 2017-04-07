@@ -41,6 +41,8 @@ class ShopActivityForm(ModelForm):
 		exclude = ['traveller']
 		widgets = {
 			'spending': forms.RadioSelect,
+			'area': forms.Select(attrs={'class':'browser-default'}),
+			'shop': forms.Select(attrs={'class':'browser-default'})
 		}
 
 class AirportActivityForm(ModelForm):
