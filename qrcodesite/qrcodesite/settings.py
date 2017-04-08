@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainsite',
     'multiselectfield',
+    'import_export',
 ]
 
 MIDDLEWARE = [

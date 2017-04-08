@@ -55,7 +55,6 @@ def getTraveller(email):
 	return traveller
 
 
-
 def background(request):
 	email = request.session.get('email', None)
 	if email == None:
@@ -117,8 +116,10 @@ def travelPlan(request):
 		
 		# create a for base on the travel plan object
 		form = TravelPlanForm(request.POST, instance = travelPlan)
+
 		if form.is_valid():
 			# save update 
+			logging.debug("[bugTag] = " + "2")
 			form.save()
 
 			# check whether visited airportactivity page
