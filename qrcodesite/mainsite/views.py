@@ -108,7 +108,8 @@ def travelPlan(request):
 		travelPlan = TravelPlan.objects.get(traveller = traveller)
 		form = TravelPlanForm(instance = travelPlan)
 	except TravelPlan.DoesNotExist:
-		form = TravelPlanForm()
+		travelPlan = TravelPlan.objects.create(traveller = traveller)
+		form = TravelPlanForm(instance = travelPlan)
 		
 	# We have the travel plan object now
 
