@@ -272,7 +272,8 @@ def airportActivity(request):
 		airportActivity = AirportActivity.objects.get(traveller = traveller)
 		form = AirportActivityForm(instance = airportActivity)
 	except AirportActivity.DoesNotExist:
-		form = AirportActivityForm()
+		airportActivity = AirportActivity.objects.create(traveller = traveller)
+		form = AirportActivityForm(instance = airportActivity)
 		
 	# We have the Airport Activity object now
 
