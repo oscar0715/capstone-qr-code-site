@@ -16,4 +16,5 @@ urlpatterns = [
 	url(r'^getShopList/$', views.getShopList, name='getShopList'),
 	url(r'^getShopSpending/$', views.getShopSpending, name='getShopSpending'),
 	url(r'^thankyou/$', views.thankyou, name='thankyou'),
+	url(r'^thankyouaftershop/$', views.thankyouAfterShop, name='thankyouAfterShop'),
 ]

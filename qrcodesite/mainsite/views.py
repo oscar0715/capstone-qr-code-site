@@ -201,7 +201,7 @@ def shopActivity(request):
 		if form.is_valid():
 			# save update 
 			form.save()
-			return redirect('mainsite:thankyou')
+			return redirect('mainsite:thankyouAfterShop')
 
 	dict = {
 		'email' : email,
@@ -297,4 +297,9 @@ def thankyou(request):
 	email = request.session.get('email', None)
 
 	return render(request, 'mainsite/thankyou.html', {'email':email})
+
+def thankyouAfterShop(request):
+	email = request.session.get('email', None)
+
+	return render(request, 'mainsite/thankyoushop.html', {'email':email})
 	
