@@ -201,7 +201,7 @@ def shopActivity(request):
 		if form.is_valid():
 			# save update 
 			form.save()
-			return redirect('mainsite:thankyouAfterShop')
+			return redirect('mainsite:airportActivity')
 
 	dict = {
 		'email' : email,
