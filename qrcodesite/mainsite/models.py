@@ -247,7 +247,8 @@ class ShopActivity(TimeStampedModel):
 
 	# Spending
 	spending_choices = (
-		('0', "$0 - $25"),
+		('-1', "I didn't spend any money"),
+		('0', "$1 - $25"),
 		('25', "$25 - $50"),
 		('50', "$50 - $100"),
 		('100', "$100+"),
