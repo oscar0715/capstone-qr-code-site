@@ -41,7 +41,7 @@ def securityGateWelcome(request):
 				# User cookie to store the email
 				request.session['email'] = email
 
-				logging.debug("[welcome email ] = " + str(request.session.get('email', False)))
+				# logging.debug("[welcome email ] = " + str(request.session.get('email', False)))
 
 				return redirect('mainsite:background')
 
@@ -124,8 +124,8 @@ def travelPlan(request):
 			form.save()
 
 			# check whether visited airportactivity page
-			shopactivityVisited = request.session.get('airportactivity', None)
-			if not shopactivityVisited == None:
+			airportactivityVisited = request.session.get('airportactivity', None)
+			if not airportactivityVisited == None:
 				return redirect('mainsite:airportActivity')
 
 			# check whether visited shopactivity page
@@ -133,6 +133,7 @@ def travelPlan(request):
 			if shopactivityVisited == None:
 				return redirect('mainsite:thankyou')
 			else :
+				logging.debug("[bugTag] = " + "2")
 				return redirect('mainsite:shopActivity')
 			
 	dict = {
@@ -201,7 +202,7 @@ def shopActivity(request):
 		if form.is_valid():
 			# save update 
 			form.save()
-			return redirect('mainsite:airportActivity')
+			return redirect('mainsite:thankyou')
 
 	dict = {
 		'email' : email,
